@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://fluxlabs.ch/flux-eco/flux-eco-app-schema.json",
+  "type": "object",
+  "properties": {
+    "endpoints": {
+      "type": "object",
+      "properties": {
+        "http": {
+          "$ref": "../../../flux-eco-http-server/app/schema/flux-eco-http-server-schema.json"
+        }
+      }
+    },
+    "bindings": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": {
+        "$ref": "#/definitions/binding"
+      }
+    }
+  },
+  "required": [
+    "endpoints"
+  ],
+  "definitions": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "server": {
+          "oneOf": [
+            {
+              "$ref": "../../../flux-eco-http-server/app/schema/flux-eco-http-server-schema.json#server"
+            },
+            {
+              "$ref": "#/definitions/databaseServerConfig"
+            }
+          ]
+        },
+        "boundActions": {
+          "boundActionCallable": {
+            "type": "string",
+            "function": true
+          }
+        },
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "handlerType": {
+              "type": "string"
+            }
+          }
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "targetPath": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path",
+            "targetPath"
+          ]
+        }
+      },
+      "required": [
+        "server",
+        "boundActions"
+      ]
+    },
+    "databaseServerConfig": {
+      "$ref": "../../../flux-eco-database-client/app/schema/flux-eco-database-client-schema.json#properties/databaseServerConfig"
+    }
+  }
+}
