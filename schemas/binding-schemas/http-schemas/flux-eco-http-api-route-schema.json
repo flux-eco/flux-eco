@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/binding-schemas/http-schemas/flux-eco-http-api-route-schema.json",
+  "title": "FluxEcoHttpApiRoute",
+  "type": "object",
+  "properties": {
+    "contentType": {
+      "$ref": "../../content-schemas/flux-eco-content-type-schema.json"
+    },
+    "actionName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "contentType",
+    "actionName"
+  ]
+}

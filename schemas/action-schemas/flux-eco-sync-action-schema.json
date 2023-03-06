@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/action-schemas/flux-eco-sync-action-schema.json",
+  "title": "FluxEcoSyncAction",
+  "type": "object",
+  "properties": {
+    "parameters": {
+      "type": "object"
+    }
+  },
+  "required": ["parameters"]
+}

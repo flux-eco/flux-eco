@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/binding-schemas/http-schemas/flux-eco-http-request-target-schema.json",
+  "title": "FluxEcoHttpRequestTarget",
+  "type": "object",
+  "properties": {
+    "server": {
+      "$ref": "flux-eco-http-server-schema.json"
+    },
+    "basePath": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "server",
+    "basePath"
+  ]
+}

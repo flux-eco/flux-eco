@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/config-schemas/flux-eco-api-config-schema.json",
+  "type": "object",
+  "properties": {
+    "outbounds": {
+      "additionalProperties": {
+        "$ref": "../mapping-schemas/flux-eco-api-outbounds-mapping-schema.json"
+      }
+    }
+  }
+}

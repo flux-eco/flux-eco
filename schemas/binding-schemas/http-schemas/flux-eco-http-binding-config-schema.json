@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/binding-schemas/http-schemas/flux-eco-http-binding-config-schema.json",
+  "title": "FluxEcoHttpBindingConfig",
+  "type": "object",
+  "properties": {
+    "server": {
+      "$ref": "flux-eco-http-server-schema.json"
+    },
+    "staticFilesPath": {
+      "type": ["string","null"]
+    },
+    "policies": {
+      "oneOf": [
+        {
+          "$ref": "flux-eco-http-policy-schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "routes": {
+      "type": "object",
+      "properties": {
+        "static": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "flux-eco-http-static-route-schema.json"
+          }
+        },
+        "api": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "flux-eco-http-api-route-schema.json"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "server",
+    "staticFilesPath",
+    "routes"
+  ]
+}
