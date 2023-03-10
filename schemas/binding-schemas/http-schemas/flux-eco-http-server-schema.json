@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://flux-eco.fluxlabs.ch/schemas/binding-schemas/http-schemas/flux-eco-http-server-schema.json",
-  "title": "FluxEcoHttpServer",
+  "title": "flux-eco-http-server-schema",
   "type": "object",
   "properties": {
     "port": {

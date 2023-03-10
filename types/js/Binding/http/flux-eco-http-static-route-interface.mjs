@@ -44,9 +44,8 @@
 /**
  @typedef {Object} FluxEcoBindingHttp.HttpServerConfig
  @property {FluxEcoBindingHttp.HttpServer} server - Configuration for the HTTP server.
- @property {Object} staticFilesPath - Path to the directory containing static files.
  @property {FluxEcoBindingHttp.HttpPolicy|null} policies - Policies to be applied to requests.
  @property {Object} routes - HTTP routes configuration.
- @property {Object.<string,FluxEcoBindingHttp.HttpStaticRoute>} routes.static - Configuration for static routes.
+ @property {Object.<string,FluxEcoBindingHttp.HttpStaticRouteConfiguration>} routes.static - Configuration for static routes.
  @property {Object.<string,FluxEcoBindingHttp.HttpApiRoute>} routes.api - Configuration for API routes.
  */

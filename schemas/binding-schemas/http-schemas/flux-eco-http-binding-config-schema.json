@@ -7,9 +7,6 @@
     "server": {
       "$ref": "flux-eco-http-server-schema.json"
     },
-    "staticFilesPath": {
-      "type": ["string","null"]
-    },
     "policies": {
       "oneOf": [
         {
@@ -24,23 +21,29 @@
       "type": "object",
       "properties": {
         "static": {
-          "type": "object",
+          "description": "directory-name with root-relative path",
+          "type": ["object","null"],
           "additionalProperties": {
-            "$ref": "flux-eco-http-static-route-schema.json"
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "flux-eco-http-static-route-schema.json"
+            }
           }
         },
         "api": {
-          "type": "object",
+          "type": ["object","null"],
           "additionalProperties": {
             "$ref": "flux-eco-http-api-route-schema.json"
           }
         }
-      }
+      },
+      "required": [
+        "static", "api"
+      ]
     }
   },
   "required": [
     "server",
-    "staticFilesPath",
     "routes"
   ]
 }

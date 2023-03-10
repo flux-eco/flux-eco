@@ -17,6 +17,7 @@
     "application/xml",
     "application/zip",
     "application/font-woff",
-    "application/font-ttf"
+    "application/font-ttf",
+    "application/geo"
   ]
 }
