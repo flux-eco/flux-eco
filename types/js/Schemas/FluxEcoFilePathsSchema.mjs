@@ -7,5 +7,6 @@
 
 /**
  * @typedef {Object} FluxEcoFilePathSchema
+ * @property {string} pathType - The path type: file|directory
  * @property {string} contentType - The content type of the file(s).
  */
