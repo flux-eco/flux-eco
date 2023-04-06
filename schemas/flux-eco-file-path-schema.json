@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://flux-eco.fluxlabs.ch/schemas/flux-eco-file-path-meta-schema.json",
-  "title": "FluxEcoFilePathMetaSchema",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/flux-eco-file-path-schema.json",
+  "title": "FluxEcoFilePathSchema",
   "type": "object",
   "properties": {
     "pathType": {
@@ -12,7 +12,7 @@
       ]
     },
     "contentType": {
-      "type": "string"
+      "$ref": "flux-eco-content-type-schema.json"
     }
   },
   "required": [

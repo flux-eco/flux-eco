@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://flux-eco.fluxlabs.ch/schemas/flux-eco-action-meta-schema.json",
-  "title": "FluxEcoActionMetaSchema",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/flux-eco-action-schema.json",
+  "title": "FluxEcoActionSchema",
   "type": "object",
   "properties": {
     "path": {
@@ -17,14 +17,17 @@
               "type": "string",
               "enum": [
                 "path",
-                "query"
+                "query",
+                "methodParameter"
               ]
             },
             "type": {
               "type": "string",
               "enum": [
                 "string",
-                "number"
+                "number",
+                "object",
+                "array"
               ]
             }
           },
@@ -38,7 +41,7 @@
       "type": "object",
       "properties": {
         "contentType": {
-          "type": "string"
+          "$ref": "flux-eco-content-type-schema.json"
         }
       }
     }

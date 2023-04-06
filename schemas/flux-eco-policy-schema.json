@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
-  "$id": "https://flux-eco.fluxlabs.ch/schemas/binding-schemas/http-schemas/flux-eco-http-policy-schema.json",
+  "$id": "https://flux-eco.fluxlabs.ch/schemas/flux-eco-http-policy-schema.json",
   "title": "FluxEcoHttpPolicy",
   "type": "object",
   "properties": {
