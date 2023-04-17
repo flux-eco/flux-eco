@@ -1,9 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://flux-eco.fluxlabs.ch/schemas/flux-eco-actions-schema.json",
-  "title": "FluxEcoActionSchema",
-  "type": "object",
-  "additionalProperties": {
-    "$ref": "flux-eco-action-schema.json"
-  }
-}

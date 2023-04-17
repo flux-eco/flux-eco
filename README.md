@@ -1,1 +1,1 @@
-# flux-eco-app
+# flux-eco
